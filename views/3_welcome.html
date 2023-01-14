@@ -1,0 +1,63 @@
+    <ons-page id="third-page">
+    <style>
+        .page__content{
+            width: 100vw;
+            overflow: hidden;
+        }
+
+    </style>
+    
+     <div class="invi-clicker" onclick="pushPage('views/4_cohort.html')">
+     </div>
+
+     <div class="left-top-logo">
+         Squid Bank
+    </div>
+
+    <div class="right-top-profile">
+         Yok Tien
+        <img src="images/profile.jfif"/>
+    </div>
+
+    <div class="prize">
+        <div class="prize-text">Cash Prize RM</div>
+        <div class="prize-number">45,600</div>
+        <div class="prize-number prize-shadow">45,600</div>
+    </div>
+
+    <div class="game-desc">
+        Welcome Yok Tien,
+        <br><br>
+        to the annual Squid Bank game where we challenge your financial literacy by putting through a series of challenges that you and your peers are eager to win away our largest prize pool ever.
+    </div>
+ 
+    <div class="game-timer-cont">
+        <div class="game-timer">
+            2H <span class="mins">03</span>M
+        </div>
+
+        <div class="game-timer-shadow">
+            2H<span class="mins">03</span>M
+        </div>
+    </div>
+
+    <div class="next-challenge">
+        until next challenge
+    </div>
+
+    <script>
+        function updateMins(){
+            var mins=60-(new Date()).getMinutes()
+            var min=("0"+mins).slice(-2)     
+            var ele=document.getElementsByClassName("mins")   
+            for(var i=0;i<ele.length;i++){
+                // console.log(ele[i])
+                ele[i].innerHTML=min   
+            }  
+        }
+        updateMins()
+        try{clearInterval(myInterval)}catch(e){}
+        var myInterval = setInterval(updateMins, 3000);
+    </script>
+
+</ons-page>

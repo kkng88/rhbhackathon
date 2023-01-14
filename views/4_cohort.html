@@ -1,0 +1,139 @@
+<ons-page modifier="cohort-page">
+    <style>
+        .page__content{
+            width: 100vw;
+            overflow: hidden;
+        }
+        .section{
+            margin-top:12vh;
+        }
+        .section-header{
+            color:#fff;
+            font-weight:bold;
+            margin:20px 0;
+            padding: 0 30px;
+        }
+        .section-card{
+            background-color:#fff;
+            border-radius: 8px;
+            color:#000;
+            display:flex;
+            margin:0 30px;
+            padding:15px;
+            width:calc(100% - 90px);
+        }
+        .section-left{
+            width:75%;
+        }   
+        .section-right{
+            background-size:cover;
+            background-repeat:no-repeat;
+            border-radius: 8px;
+            width:25%;
+        }
+        .section-edition{
+            font-size:8px;
+        }
+        .section-title{
+            font-size:20px;
+            margin:5px 0;
+        }
+        .section-people img{
+            margin-right: 9px;
+            vertical-align: top;
+        }
+        .section-people{
+            font-size:12px
+        }
+    </style>
+    <div class="left-top-logo">
+         Squid Bank
+    </div>
+      <div class="right-top-profile">
+         Yok Tien
+         <img src="images/profile.jfif"/>
+    </div>
+
+
+    <section class="section">
+        <div class="section-header">
+            Current Cohort
+        </div>
+
+        <div class="section-card" onclick="pushPage('views/5_spend.html')">
+            <div class="section-left">   
+                <div class="section-edition">#12th Edition</div>
+                <div class="section-title">Credit Score Heroes</div>
+                <div class="section-people">
+                    <img src="images/group1.png">456/456 Participants
+                    </div>
+            </div>
+            <div class="section-right" style="background-image:url(https://images.prismic.io/cred/a1efd3ad-28cd-4144-96a1-c55f166a8a84_credit+score.PNG?auto=compress,format&rect=0,0,922,614&w=620&h=413)">
+                 
+            </div>
+        </div>
+
+        <div class="section-header">
+            Other Cohorts
+        </div>
+
+        <div class="section-card" onclick="pushPage('views/5_2_save.html')">
+            <div class="section-left">   
+                <div class="section-edition">#12th Edition</div>
+                <div class="section-title">Debt Busters</div>
+                <div class="section-people">
+                    <img src="images/group1.png">456/456 Participants
+                    </div>
+            </div>
+            <div class="section-right" style="background-image:url(https://cdn.thrivingmarriages.com/wp-content/uploads/2019/09/pay-off-debts.jpg)">
+            </div>
+        </div>
+        <br>
+        <div class="section-card">
+            <div class="section-left">   
+                <div class="section-edition">#12th Edition</div>
+                <div class="section-title">Wealth Generator</div>
+                <div class="section-people">
+                    <img src="images/group1.png">456/456 Participants
+                    </div>
+            </div>
+            <div class="section-right" style="background-image:url(https://cdnblog.etmoney.com/wp-content/uploads/2020/09/Generate-Wealth.jpg)">     
+            </div>
+        </div>
+
+    </section>
+
+    
+    
+    
+  <div class="game-timer-cont">
+        <div class="game-timer">
+            2H <span class="mins">03</span>M
+        </div>
+
+        <div class="game-timer-shadow">
+            2H<span class="mins">03</span>M
+        </div>
+    </div>
+
+    <div class="next-challenge">
+        until next challenge
+    </div>
+
+    <script>
+        function updateMins(){
+            var mins=60-(new Date()).getMinutes()
+            var min=("0"+mins).slice(-2)     
+            var ele=document.getElementsByClassName("mins")   
+            for(var i=0;i<ele.length;i++){
+                // console.log(ele[i])
+                ele[i].innerHTML=min   
+            }  
+        }
+        updateMins()
+        try{clearInterval(myInterval)}catch(e){}
+        var myInterval = setInterval(updateMins, 3000);
+    </script>
+
+</ons-page>
+

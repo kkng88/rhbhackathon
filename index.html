@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <meta name="theme-color" content="#db5945">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
+
+  <script>
+    // Page init event
+    ons.platform.select("android")
+
+      function pushPage(input){
+            document.querySelector('#navigator').pushPage(input);
+      }
+      function popPage(){
+            document.querySelector('#navigator').popPage();
+      }
+      function replacePage(input){
+            document.querySelector('#navigator').replacePage(input);
+      }
+      function doublePop(){
+        popPage()
+        setTimeout(function(){popPage()},500)
+      }
+
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+
+    function shareDemo() {
+      window.plugins.share.show(
+          {
+              subject: 'Squid Bank!',
+              text: 'Join me now on Squid Bank! http://phonegap-fan.com/'
+          },
+          function() {}, // Success function
+          function() {alert('Share failed')} // Failure function
+      );
+    }
+
+    
+    
+  </script>
+</head>
+<body>
+  <ons-navigator id="navigator" page="views/1_landing.html"></ons-navigator>
+ <!-- <ons-navigator id="navigator" page="views/11_invite.html"></ons-navigator> -->
+ 
+</body>
+</html>

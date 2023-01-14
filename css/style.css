@@ -1,0 +1,189 @@
+/**/
+
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+
+@font-face {
+  font-family: gos;
+  src: url(GameOfSquids.ttf);
+}
+
+@font-face {
+  font-family: vgr;
+  src: url(VastagoGrotesk-Regular.otf);
+}
+
+html{
+    overflow-x: hidden;
+    width:100vw;
+}
+
+.page__content{
+    font-family: 'vgr';
+}
+
+#first-page .page__background{
+    background-image: url(../images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 127%;
+    background-position: 50% 0;   
+}
+
+#second-page .page__background{
+    background-image: url(../images/Frame9.png);   
+}
+
+#third-page .page__background{
+    background: #101853;
+}
+
+.page--bg-light__background{
+    background-color:#fff;
+}
+
+.page--cohort-page__background{
+    background-color:#4B0808;
+}
+
+.page--bg-purple__background{
+    background-color: #3F246A;
+}
+
+#buy-page .page__background{
+    background-image: url(../images/Frame4.png);   
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+#wait-page .page__background{
+    background: #261E5B;
+}
+
+#duel .page__background{
+    background: #0B2B6A;
+    background-image: url(../images/Frame58.png);   
+    background-size: cover;
+}
+
+#elim .page__background{
+    background-image: url(../images/Frame60.png);   
+    background-size: cover;
+}
+
+#invite .page__background{
+    background-color:#501919;
+}
+
+.left-top-logo{
+    color: #fff;
+    font-family: 'gos';
+    position: absolute;
+    left: 8vw;
+    top: 8vw;
+}
+
+.right-top-profile{
+    align-items: center;
+    color: #fff;
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+}
+
+.right-top-profile img{
+    border-radius:5vw;
+    height:10vw;
+    margin-left:3vw;
+    width:10vw;
+}
+
+.prize{
+    color:#fff;
+    text-align: center;
+    margin-top:20vh;
+    width: 100vw;
+}
+
+.prize-text{
+
+}
+.prize-number{
+    font-family: 'gos';
+    font-size:70px;
+    background: linear-gradient(180deg, #FF9B9B -20.44%, #1A68FF 112.15%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.prize-shadow{
+    position: relative;
+    top: -80px;
+    scale: 1.5;
+    opacity: 0.05;
+}
+
+.game-desc{
+    color:#fff;
+    margin-top:-10vh;
+    padding:0 30px;
+    text-align: center;
+    width: calc(100% - 60px);
+}
+
+.game-timer-cont{
+    color: #fff;
+    font-family: 'gos';
+    font-size: 70px;
+    margin-top: 30px;
+    bottom: 4vh;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+.game-timer{
+
+}
+
+.game-timer-shadow{
+    margin-top: -12vh;
+    opacity: 0.05;
+    position: relative;
+    scale: 3;
+    margin-left: -190px;
+}
+
+.next-challenge{
+    bottom: 5vh;
+    color: #fff;
+    margin-top: -3vh;
+    position: absolute;
+    text-align: center;
+    width: 100vw;
+}
+
+.invi-clicker{
+    background:transparent;
+    position:absolute;
+    height:50vh;
+    width:100vw;
+}
+
+ .section-header{
+    color:#fff;
+    font-weight:bold;
+    margin:20px 0;
+    padding: 0 30px;
+}
+
+.btn-begin{
+    color:#fff;
+    background-color: #7C49D3;
+    border:0;
+    border-radius:8px;
+    font-family:'vgr';
+    margin:15px 30px;
+    padding:15px;
+    position:relative;
+    z-index:3;
+}
