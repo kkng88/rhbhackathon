@@ -7,7 +7,9 @@
   <meta name="theme-color" content="#db5945">
   <script src="components/loader.js"></script>
   <script src="lib/onsenui/js/onsenui.min.js"></script>
-
+<meta property="og:title" content="Join the SquidBank Challenge" />
+<meta property="og:description" content="Join me now on SquidBank to get financially savvy!" />
+<meta property="og:image" content="https://kkng88.github.io/rhbhackathon/images/squid-business-cards.jpg" />
   <link rel="stylesheet" href="components/loader.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
@@ -31,7 +33,11 @@
       }
       function doublePop(){
         popPage()
-        setTimeout(function(){popPage()},500)
+        setTimeout(function(){popPage()},400)
+        setTimeout(function(){popPage()},800)
+      }
+      function resetToPage(input){
+        document.querySelector('#navigator').resetToPage(input)
       }
 
     document.addEventListener('init', function(event) {
@@ -46,8 +52,8 @@
     function shareDemo() {
       window.plugins.share.show(
           {
-              subject: 'Squid Bank!',
-              text: 'Join me now on Squid Bank! http://phonegap-fan.com/'
+              subject: 'Join the SquidBank Challenge',
+              text: 'Join me now on Squid Bank! https://kkng88.github.io/rhbhackathon/index.html'
           },
           function() {}, // Success function
           function() {alert('Share failed')} // Failure function
@@ -59,8 +65,8 @@
   </script>
 </head>
 <body>
-  <ons-navigator id="navigator" page="views/1_landing.html"></ons-navigator>
- <!-- <ons-navigator id="navigator" page="views/11_invite.html"></ons-navigator> -->
+  <ons-navigator id="navigator" page="views/2_login.html"></ons-navigator>
+ <!-- <ons-navigator id="navigator" page="views/6_wait.html"></ons-navigator> -->
  
 </body>
 </html>
