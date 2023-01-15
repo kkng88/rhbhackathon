@@ -1,159 +1,160 @@
 <ons-page modifier="bg-purple">
- <style>
-     .page__content{
-        width: 100vw;
-        overflow: hidden;
+    <style>
+        .page__content{
+           width: 100vw;
+           overflow: hidden;
+           }
+        .main-img{
+           background-color:red;
+           border-radius:0 0 30px 30px;
+           height:25vh;
+           width:100vw;
         }
-     .main-img{
-        background-color:red;
-        border-radius:0 0 30px 30px;
-        height:25vh;
-        width:100vw;
-     }
-     .big-title{
-         color:#fff;
-         font-size:30px;
-         padding:15px 30px 15px 30px;
-     }
-     .info-box{
-         background-color: #7C49D3;
-         border-radius:10px;
-         color:#fff;
-         font-size:13px;
-         margin:0 30px;
-         padding:15px;
-     }
-     .section-header span{
-         display:block;
-         float:right;
-     }
-    .carousel-scroller{
-        width: 100vw;
-        overflow-x: scroll;
-        z-index: 2;
-        position: relative;
-     }
-     .carousel{
-         display:flex;
-         width:max-content;
-     }
-    .car-card{
-        background-color:rgba(160, 183, 243, 0.2);
-        border-radius:10px;
-        color:white;
-        font-size:13px;
-        margin-left:15px;
-        width: 100px;        
-     }
-     .car-card:first-child{
-        margin-left:30px;
-     }
-     .car-card:last-child{
-         margin-right:30px;
-     } 
-     .car-card p{
-         margin:0 0 15px 15px;
-     }
-     .car-logo{
-        background-repeat: no-repeat !important;
-        background-size: contain !important;
-        height: 35px;
-        margin: 15px;
-        width: calc(100% - 30px);
-     }
-
- </style>
-
-<div class="invi-back" onclick="popPage()">
-</div>
-
-  <div class="main-img">
-  </div>
- 
- <div class="big-title">
-     Spend to Win
- </div>
-
- <div class="info-box">
-     Banks look into credit score in order to provide certain financial product. Subscribe to a BNPL and repay without fail for consecutive 3 instalment to build your alternative credit score.
- </div>
-
-<div class="section-header">
-    Participating Merchants
-    <span>See All</span>
-</div>
-
-<div class="carousel-scroller">
-<div class="carousel">
-    <div class="car-card">
-       <div class="car-logo" style="background:url(images/jd.png)">
-            
-        </div>
-        <p>JD Sports
-        <br>RM1,000</p>
-    </div>
-
-      <div class="car-card">
-        <div class="car-logo" style="background:url(images/machines.png);background-position: 0;
-    background-size: cover !important;">
-            
-        </div>
-        <p>Machines
-        <br>RM5,000</p>
-    </div>
-
-    <div class="car-card">
-        <div class="car-logo" style="background:url(images/panasonic.png);background-position: 0px;">
-        
-        </div>
-        <p>Panasonic
-        <br>RM5,000</p>
-    </div>
-
-    <div class="car-card">
-         <div class="car-logo" style="background:url(images/samsung.png);filter: brightness(50);    background-position: 0;">
-             
-        </div>
-        <p>Samsung
-        <br>RM5,000</p>
-    </div>
-
-</div>
-</div>
-
-<button class="btn-begin" onclick="pushPage('views/5_1_buy.html')">
-    Begin the Game
-</button>
-
+        .big-title{
+            color:#fff;
+            font-size:30px;
+            padding:15px 30px 15px 30px;
+        }
+        .info-box{
+            background-color: #7C49D3;
+            border-radius:10px;
+            color:#fff;
+            font-size:13px;
+            margin:0 30px;
+            padding:15px;
+        }
+        .section-header span{
+            display:block;
+            float:right;
+        }
+       .carousel-scroller{
+           width: 100vw;
+           overflow-x: scroll;
+           z-index: 2;
+           position: relative;
+        }
+        .carousel{
+            display:flex;
+            width:max-content;
+        }
+       .car-card{
+           background-color:rgba(160, 183, 243, 0.2);
+           border-radius:10px;
+           color:white;
+           font-size:13px;
+           margin-left:15px;
+           width: 100px;        
+        }
+        .car-card:first-child{
+           margin-left:30px;
+        }
+        .car-card:last-child{
+            margin-right:30px;
+        } 
+        .car-card p{
+            margin:0 0 15px 15px;
+        }
+        .car-logo{
+           background-repeat: no-repeat !important;
+           background-size: contain !important;
+           height: 35px;
+           margin: 15px;
+           width: calc(100% - 30px);
+        }
+   
+    </style>
+   
+   <div class="invi-back" onclick="popPage()">
+   </div>
+   
+     <div class="main-img">
+     </div>
     
-  <div class="game-timer-cont">
-        <div class="game-timer">
-            7D <span class="mins">23</span>H
-        </div>
-
-        <div class="game-timer-shadow">
-            7D<span class="mins">23</span>H
-        </div>
+    <div class="big-title">
+        Spend to Win
     </div>
-
-    <div class="next-challenge">
-        to complete challenge
+   
+    <div class="info-box">
+        Banks look into credit score in order to provide certain financial product. Subscribe to a BNPL and repay without fail for consecutive 3 instalment to build your alternative credit score.
     </div>
-
-    <script>
-        function updateMins(){
-            var mins=(60-(new Date()).getMinutes())%24
-            var min=("0"+mins).slice(-2)     
-            var ele=document.getElementsByClassName("mins")   
-            for(var i=0;i<ele.length;i++){
-                // console.log(ele[i])
-                ele[i].innerHTML=min   
-            }  
-        }
-        updateMins()
-        try{clearInterval(myInterval)}catch(e){}
-        var myInterval = setInterval(updateMins, 3000);
-    </script>
-
-</ons-page>
-
+   
+   <div class="section-header">
+       Participating Merchants
+       <span>See All</span>
+   </div>
+   
+   <div class="carousel-scroller">
+   <div class="carousel">
+       <div class="car-card">
+          <div class="car-logo" style="background:url(images/jd.png)">
+               
+           </div>
+           <p>JD Sports
+           <br>RM1,000</p>
+       </div>
+   
+         <div class="car-card">
+           <div class="car-logo" style="background:url(images/machines.png);background-position: 0;
+       background-size: cover !important;">
+               
+           </div>
+           <p>Machines
+           <br>RM5,000</p>
+       </div>
+   
+       <div class="car-card">
+           <div class="car-logo" style="background:url(images/panasonic.png);background-position: 0px;">
+           
+           </div>
+           <p>Panasonic
+           <br>RM5,000</p>
+       </div>
+   
+       <div class="car-card">
+            <div class="car-logo" style="background:url(images/samsung.png);filter: brightness(50);    background-position: 0;">
+                
+           </div>
+           <p>Samsung
+           <br>RM5,000</p>
+       </div>
+   
+   </div>
+   </div>
+   
+   <button class="btn-begin" onclick="pushPage('views/5_1_buy.html')">
+       Begin the Game
+   </button>
+   
+       
+     <div class="game-timer-cont">
+           <div class="game-timer">
+               7D <span class="mins">23</span>H
+           </div>
+   
+           <div class="game-timer-shadow">
+               7D<span class="mins">23</span>H
+           </div>
+       </div>
+   
+       <div class="next-challenge">
+           to complete challenge
+       </div>
+   
+       <script>
+           function updateMins(){
+               var mins=(60-(new Date()).getMinutes())%24
+               var min=("0"+mins).slice(-2)     
+               var ele=document.getElementsByClassName("mins")   
+               for(var i=0;i<ele.length;i++){
+                   // console.log(ele[i])
+                   ele[i].innerHTML=min   
+               }  
+           }
+           updateMins()
+           try{clearInterval(myInterval)}catch(e){}
+           var myInterval = setInterval(updateMins, 3000);
+       </script>
+   
+   </ons-page>
+   
+   
