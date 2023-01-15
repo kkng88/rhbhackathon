@@ -17,6 +17,7 @@
             height: 5px;
             width: 200px;
             border-radius: 50px;
+            animation-fill-mode: forwards;
             }
 
             span {
@@ -45,14 +46,15 @@
             border-bottom-left-radius: 20px;
             overflow: hidden;
             width:0;
+            animation-fill-mode: forwards;
             }
 
             .progress-bar > .span1:after, .animate1 > span > span { 
-                animation: expandWidth 6s ;
+                animation: expandWidth 6s forwards;
             }
 
             .progress-bar > .span2:after, .animate2 > span > span { 
-                animation: 6s expandWidth 6s ;
+                animation: 6s expandWidth 6s forwards;
             }
    
             @keyframes expandWidth {
