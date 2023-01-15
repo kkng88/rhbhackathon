@@ -1,7 +1,27 @@
 <ons-page id="review-page">
 
+    <style>
+        .white-box{
+            background-color: rgba(255,255,255,0.3);
+            height: 80vh;
+            margin-top: 10vh;
+            width: 80vw;
+            margin-left: 10vw;
+            border-radius: 10px;
+        }
+    </style>
      <div class="left-top-logo" onclick="popPage();">
          Squid Bank
     </div>
+
+    <div class="invi-clicker" onclick="pushPage('views/11_invite.html')">
+    </div>
+
+    <script>
+        setTimeout(function(){
+        document.querySelector("#review-page .page__background").style['background-image']="url(images/Frame63.png)"
+        },5000)
+
+    </script>
 
 </ons-page>
