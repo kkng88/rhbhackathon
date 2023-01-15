@@ -44,17 +44,17 @@
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
             overflow: hidden;
+            width:0;
             }
 
-            .progress-bar > span:after, .animate > span > span { 
-            animation: expandWidth 3s;
-            }
-            .progress-bar > span:after, .animate > span > .span2 { 
-            animation: expandWidth 3s;
-            animation-delay:4s;
+            .progress-bar > .span1:after, .animate1 > span > span { 
+                animation: expandWidth 6s ;
             }
 
-
+            .progress-bar > .span2:after, .animate2 > span > span { 
+                animation: 6s expandWidth 6s ;
+            }
+   
             @keyframes expandWidth {
             0% { width: 0; }
             100% { width: 100%; }
@@ -66,10 +66,10 @@
     </div>
 
     <div class="progress-cont">
-    <div class="progress-bar animate">
-        <span></span>
+    <div class="progress-bar animate1">
+        <span class="span1"></span>
       </div>
-        <div class="progress-bar animate bar2">
+        <div class="progress-bar animate2 bar2">
         <span class="span2"></span>
       </div>
     </div>
