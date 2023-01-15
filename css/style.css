@@ -85,7 +85,8 @@ html{
 }
 
 #elim .page__background{
-    background-image: url(../images/Frame60.png);   
+    background: linear-gradient(180deg, #880606 0%, #261010 100%);
+    /* background-image: url(../images/Frame60.png);    */
     background-size: cover;
 }
 
