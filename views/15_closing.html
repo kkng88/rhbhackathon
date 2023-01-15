@@ -1,0 +1,52 @@
+    <ons-page id="second-page">
+ 
+    <style>
+        .page__content{
+            overflow:hidden;
+        }
+        video{
+            height: 100%;
+            margin-left: -11vw;
+            opacity:1;
+            position:relative;
+            transition:all 3s;
+            width: 125%;
+            z-index:2;
+            filter: brightness(65%);
+        }
+        
+        .logo{
+            margin: 10vw;
+            position: absolute;
+            top: 25vh;
+            width: 80vw;
+            z-index:3;
+        }
+
+        .hand{
+            bottom: 0;
+            position: absolute;
+            right: 0;
+            width: 80vw;
+            z-index:1;
+        }
+        .invi-clicker{
+            z-index:4;
+        }
+    </style>
+ 
+    <video id="video3" src="images/landing.mp4" muted autoplay loop></video> 
+
+    <img class="logo" src="images/logo.png" onclick="resetToPage('views/2_login.html')"/>
+    <img class="hand" src="images/hand.png"/>
+      <!-- <div class="content" style="text-align: center">
+        <p>This is the second page.</p>
+        <ons-button id="pop-button">Pop page</ons-button>
+      </div> -->
+      <script>
+            setTimeout(function(){
+                document.getElementById('video3').style.opacity=0;
+            },10000)
+
+      </script>
+    </ons-page>

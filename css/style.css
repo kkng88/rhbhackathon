@@ -29,12 +29,23 @@ html{
 }
 
 #second-page .page__background{
-    background-image: url(../images/Frame9.png);   
+    background: linear-gradient(180deg, #1E2C98 0%, #6A1E8D 100%);
+    /* background-image: url(../images/Frame9.png);    */
 }
 
 #third-page .page__background{
     background: #101853;
 }
+
+#wait-page .page__background{
+    background: #000;
+}
+
+
+#review-page .page__background{
+    background: linear-gradient(180deg, #112769 0%, #8B4996 100%);
+}
+
 
 .page--bg-light__background{
     background-color:#fff;
@@ -50,6 +61,12 @@ html{
 
 #buy-page .page__background{
     background-image: url(../images/Frame4.png);   
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+
+#save-page .page__background{
+    background-image: url(../images/Frame55.png);   
     background-size:contain;
     background-repeat:no-repeat;
 }
@@ -119,7 +136,8 @@ html{
     position: relative;
     top: -80px;
     scale: 1.5;
-    opacity: 0.05;
+    opacity: 0.1;
+    animation: leftToRight 30s infinite;
 }
 
 .game-desc{
@@ -147,10 +165,17 @@ html{
 
 .game-timer-shadow{
     margin-top: -12vh;
-    opacity: 0.05;
+    opacity: 0.1;
     position: relative;
     scale: 3;
     margin-left: -190px;
+    animation: leftToRight 30s infinite;
+}
+
+@keyframes leftToRight {
+  0%   {margin-left: -40vw;opacity:0.1}
+  50% {margin-left: 40vw;opacity:0.05}
+  100% {margin-left: -40vw;opacity:0.1}
 }
 
 .next-challenge{
@@ -165,8 +190,17 @@ html{
 .invi-clicker{
     background:transparent;
     position:absolute;
+    top:15vh;
     height:50vh;
     width:100vw;
+}
+
+.invi-back{
+    background:transparent;
+    position:absolute;
+    top:0vh;
+    height:10vh;
+    width:25vw;
 }
 
  .section-header{

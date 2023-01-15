@@ -1,0 +1,31 @@
+<ons-page id="quiz">
+<style>
+   .page__background{
+       background: #000;
+   }
+
+   video{
+        height: auto;
+        margin-left: unset;
+        position: relative;
+        transition: unset;
+        width: 100vw;
+        z-index: 2;
+        filter: unset;
+        }
+
+        .qrcode{
+        bottom: -12px;
+        border-radius: 5vw;
+        height: 60vw;
+        left: 20vw;
+        position: absolute;
+        width: 60vw;
+        z-index: 2;
+        }
+ </style>
+    <video src="images/insta.mp4" muted autoplay loop ondblclick="pushPage('views/9_elim.html')"></video>
+
+    <img class="qrcode" src="images/qr.png" />
+
+</ons-page>
