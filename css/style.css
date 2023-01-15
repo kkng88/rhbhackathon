@@ -44,7 +44,7 @@ html{
 
 #review-page .page__background{
     background: linear-gradient(180deg, #112769 0%, #8B4996 100%);
-    background-image:url(../images/Frame62.png);
+    background-image:url(../images/Frame62.png),url(../images/Frame63.png);
     background-size:contain;
     background-repeat:no-repeat;
 }
